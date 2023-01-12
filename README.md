@@ -7,14 +7,17 @@ After installing dependencies, follow these steps:
   -- olist_products_dataset.csv
   -- olist_sellers_dataset.csv
 
-- run ```bash
-  make importorders
+- run
 
-````
+```bash
+  make importorders
+```
+
 and
+
 ```bash
 make importproducts
-````
+```
 
 and
 
@@ -27,14 +30,17 @@ Note: if you want to change the atlas database then add a [MONGODB_URI] to your 
 Also add [JWT_SECRET] to your .env
 Make sure to pass the [x-auth-token] as a header (not bearer) on each request. This token can be gotten as a response after logging in.
 
-run ```bash
-yarn dev
+run
 
-````
+```bash
+yarn dev
+```
+
 or
+
 ```bash
 npm run dev
-````
+```
 
 or
 
