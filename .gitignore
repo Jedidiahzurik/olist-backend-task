@@ -1,0 +1,7 @@
+node_modules
+.env
+yarn.lock
+yarn-error.lock
+olist_order_items_dataset.csv
+olist_products_dataset.csv
+olist_sellers_dataset.csv
