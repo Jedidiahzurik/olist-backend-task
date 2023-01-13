@@ -1,11 +1,13 @@
 const express = require('express');
 require('dotenv').config({});
 const router = require('./routes.js');
+const cors = require('cors');
 
 const server = express();
 
 server.use(express.urlencoded({ extended: true }));
 server.use(express.json());
+server.use(cors({ origin: '*' }));
 server.use('/', router);
 
 const listen = () => {
@@ -14,11 +16,3 @@ const listen = () => {
 };
 
 listen();
-
-// execOperations()
-// 	.then((result) => {
-// 		console.info('Mongodb connected!');
-// 	})
-// 	.catch((err) => {
-// 		console.log(`MongoErr: ${err}`);
-// 	});

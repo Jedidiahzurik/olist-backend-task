@@ -3,7 +3,11 @@ const sinon = require('sinon');
 
 const router = require('../routes');
 const { MongoClient } = require('mongodb');
+const { it } = require('mocha');
 
 describe('Login Controller', () => {
-	sinon.stub(MongoClient, 'connect');
+	it('should throw an error if accessing the database fails', () => {
+		sinon.stub(MongoClient, 'connect');
+		MongoClient.connect().throws();
+	});
 });
