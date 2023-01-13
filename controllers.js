@@ -7,7 +7,7 @@ require('dotenv').config({});
 const atlas_url =
 	'mongodb+srv://uty:user1uty@cluster0.hswbirn.mongodb.net/readers?retryWrites=true&w=majority';
 
-const mongoCredentials = {
+exports.mongoCredentials = {
 	url: process.env.MONGODB_URI || atlas_url,
 	options: {
 		useNewUrlParser: true,
